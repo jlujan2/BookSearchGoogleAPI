@@ -108,17 +108,17 @@ public class GoogleBookService {
 		for (Entry<String, String> entry : bookMap.entrySet()) {
 			String key = entry.getValue().replace(" ", "+");
 			
-			if(entry.getKey().equals("q")) {
+			if("q".equals(entry.getKey())) {
 				sb.append("q=" + key);
-			} else if(entry.getKey().equals("inauthor")) {
+			} else if("inauthor".equals(entry.getKey())) {
 				sb.append("+inauthor:" +key);
-			} else if(entry.getKey().equals("intitle")) {
+			} else if("intitle".equals(entry.getKey())) {
 				sb.append("+intitle:" +key);
-			} else if(entry.getKey().equals("isbn")) {
+			} else if("isbn".equals(entry.getKey())) {
 				sb.append("+isbn:" +key);
-			} else if(entry.getKey().equals("inpublisher")) {
+			} else if("inpublisher".equals(entry.getKey())) {
 				sb.append("+inpublisher:" +key);
-			} else if(entry.getKey().equals("subject")) {
+			} else if("subject".equals(entry.getKey())) {
 				sb.append("+subject:" +key);
 			}
 			
